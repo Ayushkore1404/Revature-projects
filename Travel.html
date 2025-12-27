@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Travel Packages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+  }
+
+  /* 🔥 STICKY NAVBAR */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #1e2a38;
+    color: white;
+    padding: 16px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  nav ul {
+    list-style:none;
+    display:flex;
+    gap:25px;
+  }
+  nav ul li {
+    cursor:pointer;
+    font-weight:bold;
+  }
+  .logo {
+    font-size:24px;
+    font-weight:bold;
+  }
+
+  h2 {
+    text-align:center;
+    font-size:32px;
+    margin:25px 0;
+  }
+
+  /* 🧊 GRID LAYOUT */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap:20px;
+    padding:20px 40px;
+  }
+
+  /* FILTER SIDEBAR */
+  .sidebar {
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #ddd;
+  }
+  .sidebar h3 {
+    margin-bottom:10px;
+  }
+  .sidebar ul {
+    list-style:none;
+    padding:0;
+  }
+  .sidebar ul li {
+    margin-bottom:10px;
+    font-size:15px;
+    cursor:pointer;
+  }
+
+  /* PRODUCT LIST */
+  .products {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+
+  /* 🧱 PRODUCT CARD (Flexbox) */
+  .card {
+    width:250px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    background:white;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    transition:.3s;
+  }
+  .card img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:8px;
+  }
+  .card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+  }
+  .price {
+    font-size:20px;
+    font-weight:bold;
+    color:#2ecc71;
+  }
+  button {
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#1e2a38;
+    color:white;
+    cursor:pointer;
+    margin-top:8px;
+  }
+  button:hover {
+    background:#33475d;
+  }
+
+  /* 🛒 FIXED CART ICON */
+  .cart-floating {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#0d5450;
+    color:white;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+  }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">TripXplore</div>
+  <ul>
+    <li>Home</li>
+    <li>Packages</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<h2>Travel Packages</h2>
+
+<div class="grid-container">
+
+  <!-- LEFT FILTER SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Filter by Category</h3>
+    <ul>
+      <li>Beach</li>
+      <li>Adventure</li>
+      <li>Luxury</li>
+      <li>Budget Trips</li>
+    </ul>
+  </aside>
+
+  <!-- PRODUCT LIST -->
+  <section class="products">
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&w=600">
+    <h3>Paris – 4 Days</h3>
+    <p class="price">₹69,999</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg?auto=compress&w=600">
+    <h3>Dubai Desert Safari – 3 Days</h3>
+    <p class="price">₹42,999</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&w=600">
+    <h3>Maldives Beach – 5 Days</h3>
+    <p class="price">₹1,20,000</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&w=600">
+    <h3>Goa Budget Tour – 3 Days</h3>
+    <p class="price">₹12,500</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&w=600">
+    <h3>Swiss Alps – 6 Days</h3>
+    <p class="price">₹1,80,000</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&w=600">
+    <h3>Thailand Pattaya Tour – 4 Days</h3>
+    <p class="price">₹55,000</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/401107/pexels-photo-401107.jpeg?auto=compress&w=600">
+    <h3>Kashmir Snow Trip – 5 Days</h3>
+    <p class="price">₹38,000</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&w=600">
+    <h3>Luxury Cruise – 7 Days</h3>
+    <p class="price">₹2,50,000</p>
+    <button>Add to Cart</button>
+  </div>
+
+</section>
+
+</div>
+
+<!-- 🛒 FLOATING CART -->
+<div class="cart-floating">🛒</div>
+
+</body>
+</html>
