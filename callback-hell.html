@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  function validateUser(cb) {
+    cb();
+  }
+
+  function processPayment(cb) {
+    cb();
+  }
+
+  function generateInvoice(cb) {
+    cb();
+  }
+
+  validateUser(() => {
+    processPayment(() => {
+      generateInvoice(() => {
+        console.log("Payment Completed");
+      });
+    });
+  });
+</script>
+</body>
+</html>

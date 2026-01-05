@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>forEach DOM Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>Welcome Messages</h2>
+  <ul id="list"></ul>
+
+  <script>
+    const users = ["Ayush", "Admin", "Manager"];
+    const list = document.getElementById("list");
+
+    users.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = `Welcome, ${user}!`;
+      list.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>

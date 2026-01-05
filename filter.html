@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  const products = [
+    { name: "Laptop", inStock: true },
+    { name: "Phone", inStock: false },
+    { name: "Tablet", inStock: true }
+  ];
+
+  const available = products.filter(p => p.inStock);
+  console.log("Available Products:", available);
+</script>
+</body>
+</html>

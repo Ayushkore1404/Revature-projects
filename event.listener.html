@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+  <input type="text" id="name">
+  <button type="submit">Submit</button>
+  <p id="error" style="color:red;"></p>
+</form>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+    const name = document.getElementById("name").value;
+    if (name === "") {
+      e.preventDefault();
+      document.getElementById("error").textContent = "Input required";
+    }
+  });
+</script>
+
+</body>
+</html>

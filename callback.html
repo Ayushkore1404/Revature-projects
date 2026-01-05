@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  function validateUser(user, callback) {
+    if (user === "admin") {
+      callback("Login successful");
+    } else {
+      callback("Login failed");
+    }
+  }
+
+  validateUser("admin", message => {
+    console.log(message);
+  });
+</script>
+</body>
+</html>
