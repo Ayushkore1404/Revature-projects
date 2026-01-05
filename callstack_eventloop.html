@@ -38,7 +38,9 @@
 
       console.log("End");
     });
-        // ------------Excercies question no 3-----------------
+    // *Explain the execution order using Call Stack, Callback Queue, and Event Loop. -->Synchronous code runs  first on the Call Stack, setTimeout is handled by Web APIs and placed in the Callback Queue, and the Event Loop pushes it to the Call Stack only after the stack is empty.
+
+    //     // ------------Excercies question no 3-----------------
         const apiResponse = '{"id":101,"name":"Laptop","price":50000}';
 
         const obj = JSON.parse(apiResponse);
@@ -46,6 +48,12 @@
         console.log(obj.name);
         console.log(obj.price);
   </script>
+  <!-- 2. Callback Queue
+
+You are loading ads after page load using setTimeout.
+Why does the ad load after the main content even if the timeout is 0ms?
+ANS-Even with a 0ms delay, setTimeout places the callback in the Callback Queue, and the Event Loop executes it only after the Call Stack is empty, so ads load after the main content. -->
+
 
 </body>
 </html>
